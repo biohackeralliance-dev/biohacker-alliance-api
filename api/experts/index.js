@@ -10,4 +10,4 @@ export default async function handler(req, res) {
     urlLength: process.env.NEXT_PUBLIC_SUPABASE_URL?.length,
     keyLength: process.env.SUPABASE_SERVICE_ROLE_KEY?.length
   })
-}
+} 
