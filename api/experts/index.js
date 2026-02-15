@@ -17,7 +17,7 @@ export default async function handler(req, res) {
   try {
     const supabase = createClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL,
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+      process.env.SUPABASE_SERVICE_ROLE_KEY
     )
 
     const { category, country, session_type, search, limit = 50 } = req.query
