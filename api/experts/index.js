@@ -23,7 +23,6 @@ export default async function handler(req, res) {
   console.log('Service key length:', process.env.SUPABASE_SERVICE_ROLE_KEY?.length)
   console.log('=== DEBUG END ===')
   
-  const supabase = createClient(
     const supabase = createClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL,
       process.env.SUPABASE_SERVICE_ROLE_KEY
