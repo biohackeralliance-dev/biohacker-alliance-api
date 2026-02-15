@@ -15,6 +15,15 @@ export default async function handler(req, res) {
   }
 
   try {
+    // DEBUG
+  console.log('=== DEBUG START ===')
+  console.log('URL exists:', !!process.env.NEXT_PUBLIC_SUPABASE_URL)
+  console.log('URL value:', process.env.NEXT_PUBLIC_SUPABASE_URL)
+  console.log('Service key exists:', !!process.env.SUPABASE_SERVICE_ROLE_KEY)
+  console.log('Service key length:', process.env.SUPABASE_SERVICE_ROLE_KEY?.length)
+  console.log('=== DEBUG END ===')
+  
+  const supabase = createClient(
     const supabase = createClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL,
       process.env.SUPABASE_SERVICE_ROLE_KEY
